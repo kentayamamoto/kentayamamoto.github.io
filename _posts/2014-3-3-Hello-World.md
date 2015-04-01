@@ -1,10 +1,14 @@
 ---
 layout: post
-title: You're up and running!
+title: Hello world!
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+こんにちは、やまけんです。
+こちらの記事を参考に、爆速でブログを立ち上げました。
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+[クリック1発で、Github上にブログを無料で作成できる「Jekyll Now」が超絶便利！](http://plus.appgiga.jp/masatolan/2015/01/13/55047/)
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+以前はfuelPHP等の勉強を兼ねて、awsでインスタンスを立ち上げてテンプレートをぶちこんで・・・のようなことをやっていました。
+が、この度awsのトライアル利用期間(1年)が過ぎまして、クレカの請求額がいきなり増えたのでめでたくサーバーを潰しました。
+
+という経緯で、今回はDBもなく管理も簡単そうな形式でやってみようと思います。よしなにどうぞ。
