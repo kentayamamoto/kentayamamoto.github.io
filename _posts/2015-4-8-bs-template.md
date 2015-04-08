@@ -7,5 +7,6 @@ title: Squadfree - Bootstrapベースのシングルページテンプレート
 
 [Squadfree](http://bootstraptaste.com/theme/squadfree/)
 
-たまたま触ってみて使いやすかったのでご紹介。ホストされてる[bootstraptaste](http://bootstraptaste.com/)ってサイトで検索すればソース一式ダウンロードできるはず。
+たまたま触ってみて使いやすかったのでご紹介。ホストされてる [bootstraptaste](http://bootstraptaste.com/) ってサイトで検索すればソース一式ダウンロードできるはず。
+
 こういうの使って爆速手抜き制作をしていきましょう。
