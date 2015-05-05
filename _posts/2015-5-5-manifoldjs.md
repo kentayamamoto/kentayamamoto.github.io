@@ -30,10 +30,12 @@ CordovaLib			KentayamamotoGithubIo.xcodeproj	cordova				www
 ```
 
 おおお。
+
 KentayamamotoGithubIo.xcodeproj をXCode で開いてデバッグしてみよう。
 
 ![デバッグしてみた]({{ site.baseurl }}/images/2015-05-05_ss1.png)
 
 超簡単すぎて吹く。
 カメラ機能とかもろもろのインタラクションをどこまで実装できるんだろう。
+
 まだまだポテンシャル図りきれませんが、注目です。
