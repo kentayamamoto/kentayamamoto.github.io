@@ -73,5 +73,5 @@ exclude:
     - LICENSE
     - README.md
 
-paginate: 5
+paginate: 6
 paginate_path: "/blog/page:num/"
