@@ -19,6 +19,7 @@ URL/inputパラメータ/HTTP methodのサンプルは、APIリストに追記�
 <pre>/json/apilist.json</pre>
 
 inputデータの扱いについて
+
 * **GET**かつdataType:**text**のとき、URLパラメータとして扱います。
 * **POST**かつdataType:**text**のとき、POST formdataとして扱います。textareaにはjsonで記述してください。
 * dataType:**json**のとき、jsonをリクエストに含めます。
