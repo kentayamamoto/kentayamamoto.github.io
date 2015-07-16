@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>APIコンソール</title>
     <link href="https://bootswatch.com/paper/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/apitest.css" rel="stylesheet">
 </head>
 <body>
 	<div class="navbar navbar-inverse">
@@ -17,29 +18,42 @@
 	<div class="container">
     	<div class="row well">
     		<h4>APIコンソール</h4>
-    		<p>APIを選択し、実行結果を表示します。</p>
+    		<p>APIを選択し、実行結果を表示します。 <a href="json/apilist.json">サンプルAPIリスト</a></p>
+    		<div class="col-sm-5">
+	    		<select class="width-max" id="api-name">
+					<option> -- 選択してください -- </option>
+				</select>
+			</div>
+			<div class="col-sm-7"></div>
+			<hr>
 			<div class="col-sm-5">
 				<p>URL</p>
-				<input type="text" id="api-url" style="width: 100%;"/>
+				<input type="text" id="api-url" class="width-max"/>
 				<p>POST data</p>
-	        	<textarea placeholder="" id="api-input" class="target" style="width: 100%; height: 200px;"></textarea>
+	        	<textarea placeholder="" id="api-input" class="target width-max h200"></textarea>
 	        </div>
 	        <div class="col-sm-1">
-	        	<select id="api-type" style="margin-top: 100px;margin-bottom: 10px;">
+	        	<p id="method">method</p>
+	        	<select id="api-type" class="width-max center-select-box">
 					<option value="GET">GET</option>
 					<option value="PUT">PUT</option>
 					<option value="POST">POST</option>
 					<option value="DELETE">DELETE</option>
 				</select>
+				<p>datatype</p>
+				<select id="api-datatype" class="width-max center-select-box">
+					<option value="text">text</option>
+					<option value="json">json</option>
+				</select>
 	        	<button class="action-addnew btn btn-primary" id="btn_call">実行</button>
 	        </div>
 	        <div class="col-sm-6">
 	        	<p>実行結果</p>
-	        	<textarea placeholder="" id="api-result" class="target" style="width: 100%; height: 265px;"></textarea>
+	        	<textarea placeholder="" id="api-result" class="target width-max h265"></textarea>
 	        </div>
 	        <div class="col-sm-12">
 		    	<div class="progress progress-striped active">
-					<div id="bar" class="progress-bar bar" style="width: 0%;"></div>
+					<div id="bar" class="progress-bar bar"></div>
 				</div>
 			</div>
 		</div>

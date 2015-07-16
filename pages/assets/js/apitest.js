@@ -20,6 +20,7 @@ $(function(){
 		var id = $(this).val();
 		$('#api-url').val(window.listObj[id].url);
 		$('#api-type').val(window.listObj[id].type);
+		$('#api-datatype').val(isJson(window.listObj[id].input) ? 'json' : 'text');
 		$('#api-input').val(window.listObj[id].input);
 	});
 	
@@ -30,20 +31,28 @@ $(function(){
     	window.myObj.x = 0;
     	myFunc();
     	
-    	var url = $('#api-url').val();
+    	var url,dataType,dataParsed,postData = '';
+    	url = $('#api-url').val();
+    	dataType = $('#api-datatype').val();
+    	if(dataType === 'json') {
+    		postData = $('#api-input').val();
+    	}else {
+    		url += $('#api-input').val();
+    	}
     	$.ajax({
     		url: url,
     		type: $('#api-type').val(),
-    		data: '',
-    		dataType: 'text',
+    		data: postData,
+    		dataType: $('#api-datatype').val(),
+    		contentType: dataType === 'json' ? 'application/JSON' : 'application/x-www-form-urlencoded',
     		success: function(data) {
-    			var dataParsed = JSON.parse(data);
+    			dataParsed = JSON.parse(data);
     			render(dataParsed);
     		},
 			error: function(error) {
+				$('#api-result').val(error.responseText);
 				$('#bar').css("width", "100%");
     			$(".progress").hide("slow");
-				window.alert('エラー');
 			}
     	});
     });
@@ -61,6 +70,15 @@ $(function(){
     	$('#bar').css("width", "100%");
     	$(".progress").hide("slow");
     };
+    
+    function isJson(data) {
+    	try{
+    		JSON.parse(data);
+    		return true;
+    	}catch(e) {
+    		return false;
+    	}
+    }
 	
     function myFunc() {
         window.myObj.x++;
