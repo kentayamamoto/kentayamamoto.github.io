@@ -31,19 +31,24 @@ $(function(){
     	window.myObj.x = 0;
     	myFunc();
     	
-    	var url,dataType,dataParsed,postData = '';
+    	var url,method,dataType,dataParsed,postData = '';
     	url = $('#api-url').val();
+    	method = $('#api-type').val();
     	dataType = $('#api-datatype').val();
     	if(dataType === 'json') {
     		postData = $('#api-input').val();
     	}else {
-    		url += $('#api-input').val();
+    		if(method === 'POST') {
+    			postData = JSON.parse($('#api-input').val());
+    		}else {
+    			url += $('#api-input').val();
+    		}
     	}
     	$.ajax({
     		url: url,
-    		type: $('#api-type').val(),
+    		type: method,
     		data: postData,
-    		dataType: $('#api-datatype').val(),
+    		dataType: dataType,
     		contentType: dataType === 'json' ? 'application/JSON' : 'application/x-www-form-urlencoded',
     		success: function(data) {
     			dataParsed = JSON.parse(data);
