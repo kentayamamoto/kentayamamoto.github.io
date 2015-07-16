@@ -1,0 +1,12 @@
+[
+    {
+        "input": "", 
+        "type": "GET", 
+        "url": "/api/users/info"
+    }, 
+    {
+        "input": "", 
+        "type": "POST", 
+        "url": "/api/users/register"
+    }
+]
