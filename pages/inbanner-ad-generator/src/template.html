@@ -1,0 +1,32 @@
+<link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+<style>
+	.vjs-default-skin .vjs-big-play-button {
+	    left: {LEFT}em;
+	    top: 2.5em;
+	}
+</style>
+<div id="video-wrap">
+	<a id="ad_anchor" href="{PLACE_CLICKURL}" style="width: {WIDTH}px;height: 210px; position: absolute;" target="_blank"></a>
+	<video id="ad_video_1" class="video-js vjs-default-skin" autobuffer controls width="{WIDTH}" height="{HEIGHT}" data-setup='{}'>
+		<source src="{PLACE_MP4}" type='video/mp4' />
+		<source src="{PLACE_WEBM}" type='video/webm' />
+		<source src="{PLACE_FLV}" type='video/flv' />
+		<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+	</video>
+</div>
+<script src="//vjs.zencdn.net/4.12/video.js"></script>
+<script>
+	var video = document.getElementById('ad_video_1');
+	var a = document.getElementById('ad_anchor');
+	video.addEventListener('play', function() {
+	    a.style.zIndex = 9999;
+	    var mute = document.getElementsByClassName("vjs-mute-control")[0];
+	    mute.style.width = '3em';
+	    {IMP_TRACK}
+	}, false);
+	{COMP_TRACK}
+	{AUTO_PLAY}
+	a.addEventListener('click', function() {
+		video.pause();
+	}, false);
+</script>

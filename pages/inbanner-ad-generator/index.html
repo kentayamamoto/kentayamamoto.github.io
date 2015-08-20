@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>インバナー動画タグジェネレーター</title>
+	<link href="https://bootswatch.com/paper/bootstrap.min.css" rel="stylesheet">
+	<style>
+		input {
+			width: 300px;
+		}
+		.label-area p {
+			height: 30px;
+		}
+		textarea {
+			height: 150px;
+			width: 500px;
+		}
+		select {
+			width: 100px;
+			height: 30px;
+		}
+		#autoplay {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+		<h3>インバナー動画タグジェネレーター</h3>
+		<br>
+			<div class="col-md-2 label-area">
+				<p>*動画URL:</p>
+				<p>*クリック先URL:</p>
+				<p>impトラッキングURL:</p>
+				<p>視聴完了トラッキングURL:</p>
+				<p>サイズ:</p>
+				<p>Autoplay:</p>
+			</div>
+			<div class="col-md-4 input-area">
+				<p><input type="text" id="video_url"/></p>
+				<p><input type="text" id="click_url"/></p>
+				<p><input type="text" id="imp_url"/></p>
+				<p><input type="text" id="comp_url"/></p>
+				<p>
+					<select id="size">
+						<option value="1">300x250</option>
+						<option value="2">448x252</option>
+					</select>
+				</p>
+				<p><input id="autoplay" type="checkbox" checked="true"></p>
+			</div>
+			<div class="col-md-6">
+				<h4>使い方</h4>
+				<p>1. 事前に .mp4, .webm, .flv の動画素材を用意し、CDNに配置する。</p>
+				<p>2. トラッキングが必要であれば、URLを生成しておく。</p>
+				<p>3. この画面でタグ生成をする。</p>
+				<p>4. DSP等のプラットフォームにHTMLタグ入稿をする。</p>
+			</div>
+			<div class="col-md-12">
+				<button id="btn_generate" class="action-addnew btn btn-primary" style="margin-bottom: 30px; margin-left: 420px;">タグ生成</button>
+				<h4>タグ</h4>
+				<textarea></textarea>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="src/app.js"></script>
+
+</body>
+</html>
