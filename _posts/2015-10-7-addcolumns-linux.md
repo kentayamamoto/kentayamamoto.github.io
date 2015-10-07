@@ -29,7 +29,7 @@ user\tcampaign_id\tcreative_id\tdatetime" > $1
 のような`addcolumns.sh`を作って、
 
 ```
-ls | xargs addcolumns.sh
+ls *.tsv | xargs addcolumns.sh
 ```
 
 みたいなことをする。
