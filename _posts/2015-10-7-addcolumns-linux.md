@@ -20,7 +20,7 @@ aabb  234 567 2015-10-01 01:00:00
 
 こういうのは往々にして複数ファイルに指定してあげたいので、シェルを書く。
 
-```bash:addcolumns.sh
+```sh:addcolumns.sh
 #!/bin/sh
 cat $1 | sed "1i\
 user\tcampaign_id\tcreative_id\tdatetime" > $1
