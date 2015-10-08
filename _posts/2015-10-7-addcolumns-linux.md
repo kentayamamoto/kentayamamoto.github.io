@@ -29,9 +29,11 @@ user\tcampaign_id\tcreative_id\tdatetime" > $1
 のような`addcolumns.sh`を作って、
 
 ```
-ls *.tsv | xargs addcolumns.sh
+ls *.tsv | xargs -n1 sh addcolumns.sh
 ```
 
 みたいなことをする。
 
 CSVでも同じことをすればよい。
+
+※2015/10/08追記: xargsには[-n1オプション](http://blog.goo.ne.jp/miya-shu/e/00d8d7c83251a5ca46eacc9418519386)をつけないと、最初のファイルしか更新されないので注意！
