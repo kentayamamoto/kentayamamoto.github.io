@@ -123,8 +123,8 @@ $(document).ready(function(){
     //Check if browser is compatible
     var isAndroid = /android/.test(navigator.userAgent.toLowerCase());
     if(isAndroid || !('getUserMedia' in navigator) || !('webkitSpeechRecognition' in window)){
-        ui.showModal('error', 'Support Error', 'Your browser is not supported. Please try again using an up-to-date version of Google Chrome for desktop.');
-        return;
+        // ui.showModal('error', 'Support Error', 'Your browser is not supported. Please try again using an up-to-date version of Google Chrome for desktop.');
+        // return;
     }
 
     //Set recognition language
