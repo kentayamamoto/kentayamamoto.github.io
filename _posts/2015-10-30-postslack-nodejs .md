@@ -5,7 +5,7 @@ title: nodejsでslackに投稿する
 
 Incoming WebhookのURLをslackのIntegration画面から取得しておく。
 
-nodejsでのhttp(s)リクエストをするには、requestモジュールというのが便利らしいので npm install
+nodejsでのhttp(s)リクエストをするには、requestモジュールというのが便利らしいので npm install する。
 
 ```javascript:postslack.js
 var request = require('request');
