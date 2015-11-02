@@ -16,7 +16,7 @@ radioボタンやチェックボックスのみ。
 
 で、書いてみたのが[こちら](http://kentayamamoto.github.io/pages/mdl-select/index.html)
 
-まずHTML。`.mdl-design`というクラスを作ってみる。`mdl-menu`とfor要素によって、「クリックするとmenuを開く」挙動になる。
+まずHTML。 `.mdl-design` というクラスを作ってみる。 `mdl-menu` とfor要素によって、「クリックするとmenuを開く」挙動になる。
 
 ```html
 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-select">
@@ -42,5 +42,5 @@ $(function() {
 });
 ```
 
-`mdl-textfield--floating-label` を使わないのであれば、`.addClass('is-dirty')`の部分は不要である。  
+ `mdl-textfield--floating-label` を使わないのであれば、 `.addClass('is-dirty')` の部分は不要である。  
 floating-labelを使うと、jsでtext編集をしたときにラベルの位置が変化しなかったため、直接Classを付与することで表示崩れを回避している。
