@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>index</title>
+		<meta name="description" content="">
+		<meta name="author" content="kentayamamoto">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.brown-orange.min.css" />
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+	</head>
+
+	<body>
+		<form action="#" style="max-width: 900px;margin: 0 auto;background-color: white;" class="mdl-shadow--3dp">
+		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-select" style="margin: 30px;">
+		    <input class="mdl-textfield__input" type="text" id="select-section" />
+		    <label class="mdl-textfield__label" for="sample3">セレクトしよう</label>
+		    <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="select-section">
+			  <li class="mdl-menu__item">選択肢1</li>
+			  <li class="mdl-menu__item">選択肢2</li>
+			  <li class="mdl-menu__item">選択肢3</li>
+			  <li class="mdl-menu__item">選択肢4</li>
+			</ul>
+		  </div>
+		</form>
+		
+		<script>
+			$(function() {
+				$('div.mdl-select > ul > li').click(function(e) {
+					var text = $(e.target).text();
+					$(e.target).parents('.mdl-select').addClass('is-dirty').children('input').val(text);
+				});
+			});
+		</script>
+	</body>
+</html>
