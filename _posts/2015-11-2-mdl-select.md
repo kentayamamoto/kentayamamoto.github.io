@@ -44,3 +44,10 @@ $(function() {
 
  `mdl-textfield--floating-label` を使わないのであれば、 `.addClass('is-dirty')` の部分は不要である。  
 floating-labelを使うと、jsでtext編集をしたときにラベルの位置が変化しなかったため、直接Classを付与することで表示崩れを回避している。
+
+
+
+※2015/11/04追記  
+[公式のプルリク](https://github.com/google/material-design-lite/pull/1391) で議論がなされているようであるが、検証に時間がかかっている様子。  
+とりあえずは今回の実装で間に合わせるとして、updateに期待。  
+ちなみに[Angular Material](https://material.angularjs.org/latest/demo/select)というAngularJS向けのコンポーネントには含まれているので、同じものを突っ込んでくれれば十分なのだが・・・
